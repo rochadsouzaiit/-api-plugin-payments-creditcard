@@ -1,10 +1,10 @@
 import pkg from "../package.json";
 import i18n from "./i18n/index.js";
 import schemas from "./schemas/index.js";
-import exampleCapturePayment from "./util/exampleCapturePayment.js";
-import exampleCreateAuthorizedPayment from "./util/exampleCreateAuthorizedPayment.js";
-import exampleCreateRefund from "./util/exampleCreateRefund.js";
-import exampleListRefunds from "./util/exampleListRefunds.js";
+import creditcardSibsCapturePayment from "./util/creditcardSibsCapturePayment.js";
+import creditcardSibsCreateAuthorizedPayment from "./util/creditcardSibsCreateAuthorizedPayment.js";
+import creditcardSibsCreateRefund from "./util/creditcardSibsCreateRefund.js";
+import creditcardSibsListRefunds from "./util/creditcardSibsListRefunds.js";
 import startup from "./startup.js";
 
 /**
@@ -14,26 +14,28 @@ import startup from "./startup.js";
  */
 export default async function register(app) {
   await app.registerPlugin({
-    label: "Example Payments",
-    name: "payments-example",
+    label: "Credit Card SIBS",
+    name: "creditcardsibs",
     version: pkg.version,
     i18n,
     graphQL: {
-      schemas
+      schemas,
     },
     functionsByType: {
-      startup: [startup]
+      startup: [startup],
     },
-    paymentMethods: [{
-      name: "iou_example",
-      canRefund: true,
-      displayName: "IOU Example",
-      functions: {
-        capturePayment: exampleCapturePayment,
-        createAuthorizedPayment: exampleCreateAuthorizedPayment,
-        createRefund: exampleCreateRefund,
-        listRefunds: exampleListRefunds
-      }
-    }]
+    paymentMethods: [
+      {
+        name: "creditcardsibs",
+        canRefund: true,
+        displayName: "Credit Card SIBS",
+        functions: {
+          capturePayment: creditcardCapturePayment,
+          createAuthorizedPayment: creditcardSibsCreateAuthorizedPayment,
+          createRefund: creditcardCreateRefund,
+          listRefunds: creditcardListRefunds,
+        },
+      },
+    ],
   });
 }

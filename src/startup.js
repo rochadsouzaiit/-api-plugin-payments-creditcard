@@ -4,6 +4,8 @@
  * @param {Object} context.collections Map of MongoDB collections
  * @returns {undefined}
  */
-export default function exampleIOUPaymentsStartup(context) {
-  context.collections.ExampleIOUPaymentRefunds = context.app.db.collection("ExampleIOUPaymentRefunds");
+export default function CreditCardSibsPaymentsStartup(context) {
+  context.collections.CreditCardSibsPaymentRefunds = context.app.db.collection(
+    "CreditCardSibsPaymentRefunds"
+  );
 }
