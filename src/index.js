@@ -30,10 +30,10 @@ export default async function register(app) {
         canRefund: true,
         displayName: "Credit Card SIBS",
         functions: {
-          capturePayment: creditcardCapturePayment,
+          capturePayment: creditcardSibsCapturePayment,
           createAuthorizedPayment: creditcardSibsCreateAuthorizedPayment,
-          createRefund: creditcardCreateRefund,
-          listRefunds: creditcardListRefunds,
+          createRefund: creditcardSibsCreateRefund,
+          listRefunds: creditcardSibsListRefunds,
         },
       },
     ],
