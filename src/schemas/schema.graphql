@@ -16,5 +16,5 @@ extend union PaymentMethodData = CreditCardSibsPaymentMethodData
 
 extend enum PaymentMethodName {
   "credit card sibs"
-  creditcard_sibs
+  creditcardsibs
 }
