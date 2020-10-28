@@ -34,7 +34,7 @@ export default async function creditcardSibsCreateAuthorizedPayment(
       fullName,
       gqlType: "CreditCardSibsPaymentData", // GraphQL union resolver uses this
     },
-    displayName: `Credit Card SIBS`,
+    displayName: `CREADIT-CARD-SIBS`,
     method: METHOD,
     mode: "authorize",
     name: PAYMENT_METHOD_NAME,

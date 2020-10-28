@@ -28,7 +28,7 @@ export default async function register(app) {
       {
         name: "creditcardsibs",
         canRefund: true,
-        displayName: "Credit Card SIBS",
+        displayName: "CREADIT-CARD-SIBS",
         functions: {
           capturePayment: creditcardSibsCapturePayment,
           createAuthorizedPayment: creditcardSibsCreateAuthorizedPayment,
