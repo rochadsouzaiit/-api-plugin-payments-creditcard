@@ -1,7 +1,7 @@
 {
   "name": "@inflightit/api-plugin-payments-cc-sibs",
   "description": "Credit Card Payments through SIBS plugin for the Reaction API",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "type": "module",
   "engines": {
